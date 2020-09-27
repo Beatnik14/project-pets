@@ -20,11 +20,14 @@ html, body{
     font-size: 1.5rem;
     color: #ecf8f8;
     margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+
 }
 
 
 
-#title{
+.title{
     font-size: 2rem;
     color: #ecf8f8;
     font-weight: 600;
@@ -59,6 +62,7 @@ html, body{
     display: flex;
     justify-content: space-between;
     padding : 3vh 10%;
+    flex-wrap: wrap;
 }
 
 .statement {
@@ -73,7 +77,7 @@ html, body{
     border: 1px solid #BDBDBD;
     border-radius: 8px;
     padding: 10px; */
-    width: 100%;
+    width: 60%;
     border-bottom: 1.5px solid #ffd6e0;
     height: 3.5vh;
     background-color: #9d8189;
@@ -82,13 +86,39 @@ html, body{
     border-top: none;
     border-right: none;
     border-left: none;
-   
-    
-
-    
+    border-radius: 0px;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #ecf8f8;
     opacity: 1; /* Firefox */
   }
   
+.btn{
+      background-color: #838383;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      border: 1px white solid;
+      border-radius: 5px;
+     width: 35%;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+
+::placeholder {
+    color:#ecf8f8;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.btn:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    animation-fill-mode:forwards;
+  }
+@keyframes background-color {
+    100% {
+        background-color: #89beb3;
+    }
+}

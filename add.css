@@ -1,0 +1,81 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.add-form {
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: auto; 
+    margin-bottom: auto; 
+    width: 30%;
+    height: 70vh;
+    padding: 2vh 10%;
+}
+input{
+    width: 100%;
+    border: 1.5px solid #e8e8e8;
+    height: 4vh;
+    margin-bottom: 2vh;
+    background-color: inherit;
+    color:#0e192a ;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 5px;
+    margin-top: 0.5vh;
+}
+
+.form-title {
+    text-align: center;
+}
+textarea{
+    width: 100%;
+    border: 1.5px solid #e8e8e8;
+    height: 4vh;
+    margin-bottom: 2vh;
+    background-color: inherit;
+    color:#0e192a ;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 5px;
+    margin-top: 0.5vh;
+    resize: none;
+
+}
+.form-group{
+    margin : 1vh auto
+}
+.form-title{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #818180;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    background-color: #818180;
+    display: inline-block;
+    width: 30%;
+    height: 3vh;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #89beb3;
+}
+
+#inputImage{
+    width: 30%;
+    margin: 0 auto;
+}
