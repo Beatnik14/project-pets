@@ -79,3 +79,6 @@ textarea{
     width: 30%;
     margin: 0 auto;
 }
+textarea:focus, input:focus{
+    outline: none;
+}
