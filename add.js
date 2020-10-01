@@ -5,12 +5,16 @@ const description = document.getElementById('description');
 const contactPersonName = document.getElementById('contactPersonName');
 const contactPersonNumber = document.getElementById('contactPersonNumber');
 
-// const newStatement = new Statement(titleInput.nodeValue, contactPersonName.value, contactPersonNumber.value, null, description.value, null, null, imageInput.value); 
-const statements = [];
-// const statements = JSON.parse(localStorage.getItem('statements'));
+
+// let statements = [];
+let statements = JSON.parse(localStorage.getItem('statements'));
 addBtn.addEventListener('click', () => {
+    if (titleInput.value === "" || contactPersonName.value === "" || contactPersonNumber.value === "" ||description.value === "" ||imageInput.value === "") {
+        return console.log('error')
+    }
     const newStatement = new Statement(titleInput.value, contactPersonName.value, contactPersonNumber.value, null, description.value, null, null, imageInput.value); 
    
     statements.push(newStatement);
     localStorage.setItem('statements', JSON.stringify(statements));
 });
+

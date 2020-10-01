@@ -2,10 +2,15 @@ const petList = document.querySelector('.pet-list');
 const btn = document.querySelector('.btn');
 const search = document.getElementById('search');
 
+const deleteBtn = document.getElementById('deleteBtn');
+const deleteInput = document.getElementById('deleteInput');
+
 const statementsAsString = localStorage.getItem('statements');
 const statementsAsArray = JSON.parse(statementsAsString);
 console.log(statementsAsString);
 console.log(statementsAsArray);
+
+
 
 const appendStatement = (statement) => {
     const statementTemplate = `
@@ -15,14 +20,11 @@ const appendStatement = (statement) => {
                 <p class="description">${statement.description}</p>
                 <p class="author-info">ავტორის სახელი: ${statement.contactPersonName}</p>
                 <p class="author-info">საკონტაქტო ნომერი: ${statement.contactPersonNumber}</p>
-                <button type="button" class="deleteBtn" id="addBtn">Delete</button>
+               
     </div>`;
     petList.innerHTML += statementTemplate;
 }
-let deleteBtn = document.querySelector('.deleteBtn')
-deleteBtn.addEventListener('click', ()=> {
-    statementsAsArray.slice(i,1)
-})
+
 
 
 const appendAllStatements = (statements) => {
@@ -39,10 +41,10 @@ appendAllStatements(statementsAsArray);
 btn.addEventListener('click',()=>{
     petList.innerHTML = "";
     if (search.value ==='') {
-        appendAllStatements(array);
+        appendAllStatements(statementsAsArray);
         return;
     }
-    const result = array.filter(function(left){
+    const result = statementsAsArray.filter(function(left){
         // ეს მეთოდი მარტო ზუსტ შემთხვევებს აბრუნებს
         //return left.title === search.value
         // ეს კიდე ყველას რომელიც სერჩი ინფუთს შეიცავს
@@ -51,9 +53,9 @@ btn.addEventListener('click',()=>{
 
     //ეს იგივეა ოღონდ  filter  ფუნქციაა ხელით დაწერილი
     // const result = [];
-    // for (let i = 0; i < array.length; i++) {
-    //     if (array[i].title === search.value) {
-    //         result.push(array[i])
+    // for (let i = 0; i < statementsAsArray.length; i++) {
+    //     if (statementsAsArray[i].title === search.value) {
+    //         result.push(statementsAsArray[i])
     //     }
         
     // }
@@ -61,3 +63,30 @@ btn.addEventListener('click',()=>{
     petList.innerHTML = "";
     appendAllStatements(result);
 })
+
+
+deleteBtn.addEventListener('click', ()=> {
+    petList.innerHTML = "";
+    if (deleteInput.value ==='') {
+        appendAllStatements(statementsAsArray);
+        return;
+    }
+   
+    let number ;
+    for (let i = 0; i < statementsAsArray.length; i++) {
+        if (statementsAsArray[i].title === deleteInput.value) {
+            statementsAsArray.splice(i,1);
+        }
+    }
+    
+    appendAllStatements(statementsAsArray);
+})
+
+
+
+
+
+
+
+
+

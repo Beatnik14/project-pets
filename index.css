@@ -58,18 +58,20 @@ html, body{
 .pet-list {
     margin: 2vh auto;
     width:70%;
-    padding: 30px;
+    
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
     padding : 3vh 10%;
     flex-wrap: wrap;
 }
 
 .statement {
     padding: 0px 5px;
-    width: 300px;
+    width: 25%;
     border: 1px solid #BDBDBD;
     margin-right: 50px;
+    margin-bottom: 50px;
 }
 
 .search-input {
@@ -121,4 +123,37 @@ textarea:focus, input:focus{
     100% {
         background-color: #89beb3;
     }
+}
+#deleteInputDiv{
+    width: 25%;
+    margin: 10vh auto;
+}
+#deleteBtn{
+    width: 30%;
+    height: 3.5vh;
+    border: 1px solid rgb(179, 179, 179);
+    color: #dfdfdf;
+    background-color: #695e62;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#deleteBtn:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    animation-fill-mode:forwards;
+  }
+@keyframes background-color {
+    100% {
+        background-color: #97878d;
+    }
+}
+textarea:focus, input:focus,#deleteBtn,button{
+    outline: none;
+}
+#deleteInput{
+    margin-top: 3vh;
+    width: 30%;
+    height: 3vh;
+    border: 1px solid rgb(179, 179, 179);
+    
 }
