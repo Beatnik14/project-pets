@@ -6,7 +6,7 @@ const contactPersonName = document.getElementById('contactPersonName');
 const contactPersonNumber = document.getElementById('contactPersonNumber');
 
 
-// let statements = [];
+
 let statements = JSON.parse(localStorage.getItem('statements'));
 addBtn.addEventListener('click', () => {
     if (titleInput.value === "" || contactPersonName.value === "" || contactPersonNumber.value === "" ||description.value === "" ||imageInput.value === "") {
