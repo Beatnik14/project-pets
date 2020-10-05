@@ -17,7 +17,7 @@
         <div>
             <nav class="main-nav">
                 <a href="index.html"> Home </a>
-                <a href="">About </a>
+                <a href="register.php">Register </a>
                 <a href="">Contact</a>
                 <a href="add.html">Add</a>
             </nav>
