@@ -1,0 +1,23 @@
+{
+  "statements": [
+    {
+      "id": 1,
+      "title": "ჩუქდება თეთრი კნუტი",
+      "decription": "ძალიან საყვარელია",
+      "image": "https://static.toiimg.com/thumb/msid-72519407,width-800,height-600,resizemode-75,imgsize-1113261,pt-32,y_pad-40/72519407.jpg",
+      "contactPersonName": "Luka",
+      "contactPersonNumber": "599931926"
+    },
+    {
+      "image": "https://i.ytimg.com/vi/Ep3jK1bZrB8/maxresdefault.jpg",
+      "title": "asddfsaf",
+      "contactPersonName": "sadsa",
+      "contactPersonNumber": "dsadsa",
+      "address": "",
+      "description": "asdsad",
+      "pet": "",
+      "price": "",
+      "id": 2
+    }
+  ]
+}

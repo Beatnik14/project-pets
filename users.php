@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <div id="tableDiv">
     <table id = "tableid">
         <thead>

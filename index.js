@@ -11,10 +11,20 @@ if (localStorage.getItem('statements') === '') {
 }
 const statementsAsString = localStorage.getItem('statements');
 let statementsAsArray = JSON.parse(statementsAsString);
-console.log(statementsAsString);
-console.log(statementsAsArray);
+// console.log(statementsAsString);
+// console.log(statementsAsArray);
 
+const getStatements = () =>{
+    $.ajax({
+        method: "GET",
+        url: "http://localhost:3000/statements",
+    })
+    .done(function (data) {
+        appendAllStatements(data);
+    });
+}
 
+getStatements();
 
 const appendStatement = (statement) => {
     const statementTemplate = `
