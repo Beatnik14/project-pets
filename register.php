@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="register.css">
 </head>
 <body>
+  
     <div id='main-div'>
         <form action="users.php" method="post" id="form" >
         <p id="sign-up">Sign Up</p>

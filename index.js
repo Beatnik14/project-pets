@@ -6,7 +6,7 @@ const deleteBtn = document.getElementById('deleteBtn');
 const deleteInput = document.getElementById('deleteInput');
 
 let emptyArray = [];
-if (localStorage.getItem('statements') === '') {
+if (localStorage.getItem('statements') === null) {
     localStorage.setItem('statements',JSON.stringify(emptyArray))
 }
 const statementsAsString = localStorage.getItem('statements');
@@ -14,17 +14,17 @@ let statementsAsArray = JSON.parse(statementsAsString);
 // console.log(statementsAsString);
 // console.log(statementsAsArray);
 
-const getStatements = () =>{
-    $.ajax({
-        method: "GET",
-        url: "http://localhost:3000/statements",
-    })
-    .done(function (data) {
-        appendAllStatements(data);
-    });
-}
+// const getStatements = () =>{
+//     $.ajax({
+//         method: "GET",
+//         url: "http://localhost:3000/statements",
+//     })
+//     .done(function (data) {
+//         appendAllStatements(data);
+//     });
+// }
 
-getStatements();
+// getStatements();
 
 const appendStatement = (statement) => {
     const statementTemplate = `
@@ -63,6 +63,7 @@ btn.addEventListener('click',()=>{
         //return left.title === search.value
         // ეს კიდე ყველას რომელიც სერჩი ინფუთს შეიცავს
         return left.title.includes(search.value)
+     
     });
 
     //ეს იგივეა ოღონდ  filter  ფუნქციაა ხელით დაწერილი

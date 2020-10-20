@@ -18,23 +18,9 @@
 </head>
 
 <body>
-    <header class="header">
-        <div><p class="title">Paws</p></div>
-        <div>
-            <nav class="main-nav">
-                <a href="index.html"> Home </a>
-                <a href="">About </a>
-                <a href="">Contact</a>
-                <a href="add.html">Add</a>
-            </nav>
-        </div>
-        <div>
-            <form action="">
-        <input type="text" class="search-input" id="search" placeholder="Find Pet">
-        <button type="button" class="btn">Search</button>
-         </form>
-    </div>
-    </header>
+<?php
+    include_once('header.php')
+    ?>
     <form class="add-form">
         <h3 class="form-title">Add Statement</h3>
         <div class="form-group">
